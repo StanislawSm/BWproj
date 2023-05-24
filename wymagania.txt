@@ -1,0 +1,10 @@
+Natomiast ogólne wymagania co do ontologii, chciałbym ustalić następujące:
+przynajmniej 10 konceptów (mogą wśród nich być koncepy równoważne konceptom złożonym)
+przynajmniej 3 role
+Jakiś ciekawy sposób wnioskowania, do zaprezentowania prowadzącemu najlepiej:
+wykorzystujący koncept R some (R some C),
+wykorzystujący koncept R only C,
+wykorzystujący koncept R min n C,
+wykorzystujący koncept R max n C,
+wykorzystujący dziedziczenie wyczerpujące
+(np. zajęcia dzielą się wyłącznie na wykłady, laboratoria, seminaria i projekty).
