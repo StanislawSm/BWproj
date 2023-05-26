@@ -49,6 +49,9 @@
         <Class IRI="#RozmowcaZaawansowany"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SredniaKonwersacja"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Temat"/>
     </Declaration>
     <Declaration>
@@ -88,6 +91,9 @@
         <NamedIndividual IRI="#polityka"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#praca"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#robot1"/>
     </Declaration>
     <Declaration>
@@ -103,7 +109,7 @@
         <Class IRI="#DlugaKonwersacja"/>
         <ObjectIntersectionOf>
             <Class IRI="#Konwersacja"/>
-            <ObjectMinCardinality cardinality="3">
+            <ObjectMinCardinality cardinality="4">
                 <ObjectProperty IRI="#zawiera"/>
                 <Class IRI="#Temat"/>
             </ObjectMinCardinality>
@@ -113,7 +119,7 @@
         <Class IRI="#KrotkaKonwersacja"/>
         <ObjectIntersectionOf>
             <Class IRI="#Konwersacja"/>
-            <ObjectMaxCardinality cardinality="3">
+            <ObjectMaxCardinality cardinality="1">
                 <ObjectProperty IRI="#zawiera"/>
                 <Class IRI="#Temat"/>
             </ObjectMaxCardinality>
@@ -152,6 +158,20 @@
             </ObjectSomeValuesFrom>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SredniaKonwersacja"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Konwersacja"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#zawiera"/>
+                <Class IRI="#Temat"/>
+            </ObjectMinCardinality>
+            <ObjectMaxCardinality cardinality="3">
+                <ObjectProperty IRI="#zawiera"/>
+                <Class IRI="#Temat"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#DlugaKonwersacja"/>
         <Class IRI="#Konwersacja"/>
@@ -161,6 +181,7 @@
         <ObjectUnionOf>
             <Class IRI="#DlugaKonwersacja"/>
             <Class IRI="#KrotkaKonwersacja"/>
+            <Class IRI="#SredniaKonwersacja"/>
         </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
@@ -187,9 +208,18 @@
         <Class IRI="#RozmowcaZaawansowany"/>
         <Class IRI="#Rozmowca"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SredniaKonwersacja"/>
+        <Class IRI="#Konwersacja"/>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#DlugaKonwersacja"/>
         <Class IRI="#KrotkaKonwersacja"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DlugaKonwersacja"/>
+        <Class IRI="#KrotkaKonwersacja"/>
+        <Class IRI="#SredniaKonwersacja"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Konwersacja"/>
@@ -236,30 +266,16 @@
     <DifferentIndividuals>
         <NamedIndividual IRI="#anna"/>
         <NamedIndividual IRI="#basia"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#anna"/>
-        <NamedIndividual IRI="#basia"/>
         <NamedIndividual IRI="#konwersacja1"/>
         <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#konwersacjaSportowa"/>
         <NamedIndividual IRI="#pogoda"/>
         <NamedIndividual IRI="#polityka"/>
+        <NamedIndividual IRI="#praca"/>
         <NamedIndividual IRI="#robot1"/>
         <NamedIndividual IRI="#robot2"/>
+        <NamedIndividual IRI="#robotSportowy"/>
         <NamedIndividual IRI="#sport"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#konwersacja1"/>
-        <NamedIndividual IRI="#konwersacja2"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#pogoda"/>
-        <NamedIndividual IRI="#polityka"/>
-        <NamedIndividual IRI="#sport"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#robot1"/>
-        <NamedIndividual IRI="#robot2"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bierzeUdzial"/>
@@ -285,6 +301,11 @@
         <ObjectProperty IRI="#zawiera"/>
         <NamedIndividual IRI="#konwersacja2"/>
         <NamedIndividual IRI="#polityka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#praca"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#zawiera"/>
