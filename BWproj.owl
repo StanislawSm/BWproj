@@ -16,10 +16,39 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.semanticweb.org/user/ontologies/2023/4/untitled-ontology-4">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#DlugaKonwersacja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Konwersacja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KrotkaKonwersacja"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DlugaKonwersacja"/>
+        <Class IRI="#Konwersacja"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Konwersacja"/>
+        <ObjectUnionOf>
+            <Class IRI="#DlugaKonwersacja"/>
+            <Class IRI="#KrotkaKonwersacja"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KrotkaKonwersacja"/>
+        <Class IRI="#Konwersacja"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#DlugaKonwersacja"/>
+        <Class IRI="#KrotkaKonwersacja"/>
+    </DisjointClasses>
 </Ontology>
 
 
