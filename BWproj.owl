@@ -30,6 +30,103 @@
     <Declaration>
         <Class IRI="#KrotkaKonwersacja"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="#Robot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RobotProsty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RobotZaawansowany"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rozmowca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RozmowcaZaawansowany"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Uzytkownik"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#bierzeUdzial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#jestProwadzona"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#prowadzi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#zawiera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#anna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#basia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#konwersacja1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#konwersacja2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pogoda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#polityka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#robot1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#robot2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sport"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#DlugaKonwersacja"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Konwersacja"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="#zawiera"/>
+                <Class IRI="#Temat"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KrotkaKonwersacja"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Konwersacja"/>
+            <ObjectMaxCardinality cardinality="3">
+                <ObjectProperty IRI="#zawiera"/>
+                <Class IRI="#Temat"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RobotZaawansowany"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#prowadzi"/>
+            <Class IRI="#DlugaKonwersacja"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RozmowcaZaawansowany"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#bierzeUdzial"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#jestProwadzona"/>
+                <Class IRI="#RobotZaawansowany"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#DlugaKonwersacja"/>
         <Class IRI="#Konwersacja"/>
@@ -45,10 +142,166 @@
         <Class IRI="#KrotkaKonwersacja"/>
         <Class IRI="#Konwersacja"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Robot"/>
+        <ObjectUnionOf>
+            <Class IRI="#RobotProsty"/>
+            <Class IRI="#RobotZaawansowany"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RobotProsty"/>
+        <Class IRI="#Robot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RobotZaawansowany"/>
+        <Class IRI="#Robot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rozmowca"/>
+        <Class IRI="#Uzytkownik"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RozmowcaZaawansowany"/>
+        <Class IRI="#Rozmowca"/>
+    </SubClassOf>
     <DisjointClasses>
         <Class IRI="#DlugaKonwersacja"/>
         <Class IRI="#KrotkaKonwersacja"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Konwersacja"/>
+        <Class IRI="#Robot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Konwersacja"/>
+        <Class IRI="#Temat"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Konwersacja"/>
+        <Class IRI="#Uzytkownik"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Robot"/>
+        <Class IRI="#Temat"/>
+        <Class IRI="#Uzytkownik"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#RobotProsty"/>
+        <Class IRI="#RobotZaawansowany"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Konwersacja"/>
+        <NamedIndividual IRI="#konwersacja1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#zawiera"/>
+            <Class IRI="#Temat"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#konwersacja1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Konwersacja"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temat"/>
+        <NamedIndividual IRI="#pogoda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temat"/>
+        <NamedIndividual IRI="#polityka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temat"/>
+        <NamedIndividual IRI="#sport"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#konwersacja1"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#pogoda"/>
+        <NamedIndividual IRI="#polityka"/>
+        <NamedIndividual IRI="#sport"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#bierzeUdzial"/>
+        <NamedIndividual IRI="#anna"/>
+        <NamedIndividual IRI="#konwersacja1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#bierzeUdzial"/>
+        <NamedIndividual IRI="#basia"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacja1"/>
+        <NamedIndividual IRI="#pogoda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#pogoda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#polityka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#sport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#prowadzi"/>
+        <NamedIndividual IRI="#robot1"/>
+        <NamedIndividual IRI="#konwersacja1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#prowadzi"/>
+        <NamedIndividual IRI="#robot2"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#jestProwadzona"/>
+        <ObjectProperty IRI="#prowadzi"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#bierzeUdzial"/>
+        <Class IRI="#Rozmowca"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#jestProwadzona"/>
+        <Class IRI="#Konwersacja"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#prowadzi"/>
+        <Class IRI="#Robot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#zawiera"/>
+        <Class IRI="#Konwersacja"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#bierzeUdzial"/>
+        <Class IRI="#Konwersacja"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#jestProwadzona"/>
+        <Class IRI="#Robot"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#prowadzi"/>
+        <Class IRI="#Konwersacja"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#zawiera"/>
+        <Class IRI="#Temat"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 
