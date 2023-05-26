@@ -37,6 +37,9 @@
         <Class IRI="#RobotProsty"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#RobotSportowy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#RobotZaawansowany"/>
     </Declaration>
     <Declaration>
@@ -76,6 +79,9 @@
         <NamedIndividual IRI="#konwersacja2"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#konwersacjaSportowa"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#pogoda"/>
     </Declaration>
     <Declaration>
@@ -86,6 +92,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#robot2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#robotSportowy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#sport"/>
@@ -108,6 +117,22 @@
                 <ObjectProperty IRI="#zawiera"/>
                 <Class IRI="#Temat"/>
             </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RobotSportowy"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#prowadzi"/>
+                <Class abbreviatedIRI="owl:Thing"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#prowadzi"/>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#zawiera"/>
+                    <NamedIndividual IRI="#sport"/>
+                </ObjectHasValue>
+            </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -143,14 +168,11 @@
         <Class IRI="#Konwersacja"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RobotProsty"/>
         <Class IRI="#Robot"/>
-        <ObjectUnionOf>
-            <Class IRI="#RobotProsty"/>
-            <Class IRI="#RobotZaawansowany"/>
-        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#RobotProsty"/>
+        <Class IRI="#RobotSportowy"/>
         <Class IRI="#Robot"/>
     </SubClassOf>
     <SubClassOf>
@@ -191,10 +213,6 @@
         <Class IRI="#RobotZaawansowany"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="#Konwersacja"/>
-        <NamedIndividual IRI="#konwersacja1"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="#zawiera"/>
             <Class IRI="#Temat"/>
@@ -202,24 +220,33 @@
         <NamedIndividual IRI="#konwersacja1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Konwersacja"/>
-        <NamedIndividual IRI="#konwersacja2"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#zawiera"/>
+            <Class IRI="#Temat"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#konwersacjaSportowa"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Temat"/>
-        <NamedIndividual IRI="#pogoda"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Temat"/>
-        <NamedIndividual IRI="#polityka"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Temat"/>
-        <NamedIndividual IRI="#sport"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#prowadzi"/>
+            <Class IRI="#Konwersacja"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#robotSportowy"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#anna"/>
         <NamedIndividual IRI="#basia"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#anna"/>
+        <NamedIndividual IRI="#basia"/>
+        <NamedIndividual IRI="#konwersacja1"/>
+        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#pogoda"/>
+        <NamedIndividual IRI="#polityka"/>
+        <NamedIndividual IRI="#robot1"/>
+        <NamedIndividual IRI="#robot2"/>
+        <NamedIndividual IRI="#sport"/>
     </DifferentIndividuals>
     <DifferentIndividuals>
         <NamedIndividual IRI="#konwersacja1"/>
@@ -265,6 +292,11 @@
         <NamedIndividual IRI="#sport"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacjaSportowa"/>
+        <NamedIndividual IRI="#sport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#prowadzi"/>
         <NamedIndividual IRI="#robot1"/>
         <NamedIndividual IRI="#konwersacja1"/>
@@ -273,6 +305,11 @@
         <ObjectProperty IRI="#prowadzi"/>
         <NamedIndividual IRI="#robot2"/>
         <NamedIndividual IRI="#konwersacja2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#prowadzi"/>
+        <NamedIndividual IRI="#robotSportowy"/>
+        <NamedIndividual IRI="#konwersacjaSportowa"/>
     </ObjectPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#jestProwadzona"/>
