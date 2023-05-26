@@ -218,6 +218,10 @@
         <NamedIndividual IRI="#sport"/>
     </ClassAssertion>
     <DifferentIndividuals>
+        <NamedIndividual IRI="#anna"/>
+        <NamedIndividual IRI="#basia"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
         <NamedIndividual IRI="#konwersacja1"/>
         <NamedIndividual IRI="#konwersacja2"/>
     </DifferentIndividuals>
@@ -225,6 +229,10 @@
         <NamedIndividual IRI="#pogoda"/>
         <NamedIndividual IRI="#polityka"/>
         <NamedIndividual IRI="#sport"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#robot1"/>
+        <NamedIndividual IRI="#robot2"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bierzeUdzial"/>
