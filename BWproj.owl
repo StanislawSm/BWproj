@@ -76,13 +76,13 @@
         <NamedIndividual IRI="#basia"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#konwersacja1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#konwersacjaPogodowa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#konwersacjaSportowa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#pogoda"/>
@@ -94,10 +94,10 @@
         <NamedIndividual IRI="#praca"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#robot1"/>
+        <NamedIndividual IRI="#robotAlex"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#robot2"/>
+        <NamedIndividual IRI="#robotIvona"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#robotSportowy"/>
@@ -247,7 +247,7 @@
             <ObjectProperty IRI="#zawiera"/>
             <Class IRI="#Temat"/>
         </ObjectExactCardinality>
-        <NamedIndividual IRI="#konwersacja1"/>
+        <NamedIndividual IRI="#konwersacjaPogodowa"/>
     </ClassAssertion>
     <ClassAssertion>
         <ObjectExactCardinality cardinality="1">
@@ -266,51 +266,31 @@
     <DifferentIndividuals>
         <NamedIndividual IRI="#anna"/>
         <NamedIndividual IRI="#basia"/>
-        <NamedIndividual IRI="#konwersacja1"/>
-        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#konwersacjaPogodowa"/>
         <NamedIndividual IRI="#konwersacjaSportowa"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
         <NamedIndividual IRI="#pogoda"/>
         <NamedIndividual IRI="#polityka"/>
         <NamedIndividual IRI="#praca"/>
-        <NamedIndividual IRI="#robot1"/>
-        <NamedIndividual IRI="#robot2"/>
+        <NamedIndividual IRI="#robotAlex"/>
+        <NamedIndividual IRI="#robotIvona"/>
         <NamedIndividual IRI="#robotSportowy"/>
         <NamedIndividual IRI="#sport"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bierzeUdzial"/>
         <NamedIndividual IRI="#anna"/>
-        <NamedIndividual IRI="#konwersacja1"/>
+        <NamedIndividual IRI="#konwersacjaPogodowa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#bierzeUdzial"/>
         <NamedIndividual IRI="#basia"/>
-        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#zawiera"/>
-        <NamedIndividual IRI="#konwersacja1"/>
+        <NamedIndividual IRI="#konwersacjaPogodowa"/>
         <NamedIndividual IRI="#pogoda"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#zawiera"/>
-        <NamedIndividual IRI="#konwersacja2"/>
-        <NamedIndividual IRI="#pogoda"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#zawiera"/>
-        <NamedIndividual IRI="#konwersacja2"/>
-        <NamedIndividual IRI="#polityka"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#zawiera"/>
-        <NamedIndividual IRI="#konwersacja2"/>
-        <NamedIndividual IRI="#praca"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#zawiera"/>
-        <NamedIndividual IRI="#konwersacja2"/>
-        <NamedIndividual IRI="#sport"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#zawiera"/>
@@ -318,14 +298,34 @@
         <NamedIndividual IRI="#sport"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#prowadzi"/>
-        <NamedIndividual IRI="#robot1"/>
-        <NamedIndividual IRI="#konwersacja1"/>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
+        <NamedIndividual IRI="#polityka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
+        <NamedIndividual IRI="#pogoda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
+        <NamedIndividual IRI="#sport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zawiera"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
+        <NamedIndividual IRI="#praca"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#prowadzi"/>
-        <NamedIndividual IRI="#robot2"/>
-        <NamedIndividual IRI="#konwersacja2"/>
+        <NamedIndividual IRI="#robotAlex"/>
+        <NamedIndividual IRI="#konwersacjaPogodowa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#prowadzi"/>
+        <NamedIndividual IRI="#robotIvona"/>
+        <NamedIndividual IRI="#konwersacjaZlozona"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#prowadzi"/>
